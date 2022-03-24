@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp -v bashrc ~/.bashrc
+cat bashrc >> ~/.bashrc

@@ -1,3 +1,8 @@
+
+#
+# Add some my custom configs for bash
+#
+
 umask 027
 echo "Prepare some dirs"
 MY_CONF=~/.my_configs
