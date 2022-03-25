@@ -18,5 +18,5 @@ agent_config=${MY_CONF}/ssh-agent.config
 source ${agent_config}
 
 # check running ssh-agent 
-ps -p ${SSH_AGENT_PID} >/dev/null
-[ $? -eq 0 ] || ( ssh-agent -a ${socket_file} > ${agent_config} && source ${agent_config} )  
+ps -p ${SSH_AGENT_PID} >/dev/null 2>&1
+[ $? -eq 0 ] || ( rm -f ${socket_file} && ssh-agent -a ${socket_file} > ${agent_config} && source ${agent_config} )
